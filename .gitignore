@@ -127,3 +127,5 @@ dmypy.json
 # My ignores
 .project
 .pydevproject
+*.plist
+*.bak
