@@ -74,8 +74,12 @@ else:
         file.writelines(lines)
     
     sftpClient.put("SystemVersion.plist", "/System/Library/CoreServices/SystemVersion.plist")
-    ver = "8.4.1" if install_new else "9.3.6" if install_latest else custom_version if install_custom else "6.1.3"
-    print(f"Successfully modified, go to OTA updates and download iOS {ver}")
+    if install_new or install_latest or not install_custom:
+        ver = "8.4.1" if install_new else "9.3.6" if install_latest else "6.1.3"
+        mod = "6.1.3" if install_new else "7.1" if install_latest else "5.0"
+        print(f"Successfully modified to {mod}, go to OTA updates and download iOS {ver}")
+    else:
+        print(f"Successfully modified to {custom_version}")
     
 sftpClient.close()
     
