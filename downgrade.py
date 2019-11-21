@@ -43,7 +43,6 @@ open("SystemVersion.plist", "w")
 
 sftpClient = sshClient.open_sftp()
 
-
 if restore:
     if os.path.exists("SystemVersion.plist.bak"): 
         sftpClient.put("SystemVersion.plist.bak", "/System/Library/CoreServices/SystemVersion.plist")
