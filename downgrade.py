@@ -37,7 +37,7 @@ sftpClient = sshClient.open_sftp()
 
 if restore:
     if os.path.exists("SystemVersion.plist.bak"): 
-        sftpClient.put("SystemVersion.plist", "/System/Library/CoreServices/SystemVersion.plist")
+        sftpClient.put("SystemVersion.plist.bak", "/System/Library/CoreServices/SystemVersion.plist")
         print("Successfully restored file from backup")
     else:
         print("Oops, there is no backup")
