@@ -59,7 +59,7 @@ else:
         file.writelines(lines)
     
     sftpClient.put("SystemVersion.plist", "/System/Library/CoreServices/SystemVersion.plist")
-    if install_new or install_latest or not install_custom:
+    if not install_custom:
         ver = "8.4.1"
         mod = "6.1.3"
         print(f"Successfully modified to {mod}, go to OTA updates and download iOS {ver}")
