@@ -1,4 +1,5 @@
 # 32bit-OTA-downgrade
+This tool allows you to downgrade your device to iOS 8.4.1 from any higher JailBroken version
 
 # List of supported devices:
 1. iPhone 4s
@@ -9,7 +10,6 @@
 1. iPad mini 1
 1. iPod Touch 5
 
-This tool allows you to downgrade your device to iOS 8.4.1 from any higher JailBroken version
 
 # Usage
 1. Install JailBreak on your iDevice
