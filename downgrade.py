@@ -44,7 +44,9 @@ if restore:
 else:
     sftpClient.get("/System/Library/CoreServices/SystemVersion.plist", "SystemVersion.plist")
 
-    if not os.path.exists("SystemVersion.plist.bak") and not no_backup:
+    if not no_backup:
+        if os.path.exists("SystemVersion.plist.bak"):
+            input("There is old backup, it will be removed. Press Enter to continue")
         shutil.copy2("SystemVersion.plist", "SystemVersion.plist.bak")
 
     with open("SystemVersion.plist") as file:
